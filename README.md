@@ -1,8 +1,14 @@
-## Sales Insights Data Analysis Project
+## Sales Data Analysis with SQL and Power BI
 
-### Instructions to setup mysql on your local computer
+### Run Locally
 
-1. SQL database dump is in db_dump.sql file above. Download `db_dump_version_2.sql` file to your local computer and import it as per instructions given in the tutorial video
+Clone the project
+
+```bash
+  git clone https://github.com/deepamkalekar/Sale-Data-Analysis-PowerBI.git
+```
+
+Go to the project directory and open ``` .pbix ``` file with Microsoft Power BI Desktop
 
 ### Data Analysis Using SQL
 
@@ -44,12 +50,12 @@
 and transactions.market_code="Mark001";`
 
 
-Data Analysis Using Power BI
+Power BI Dashboard Preview
 ============================
 
-1. Formula to create norm_amount column
-
-`= Table.AddColumn(#"Filtered Rows", "norm_amount", each if [currency] = "USD" or [currency] ="USD#(cr)" then [sales_amount]*75 else [sales_amount], type any)`
+![Page1](https://github.com/deepamkalekar/Sale-Data-Analysis-PowerBI/blob/master/Sales-key-insight.png)
+![Page2](https://github.com/deepamkalekar/Sale-Data-Analysis-PowerBI/blob/master/sales-profit-analysis.png)
+![Page3](https://github.com/deepamkalekar/Sale-Data-Analysis-PowerBI/blob/master/sales-performance-insight.png)
 
 
 
